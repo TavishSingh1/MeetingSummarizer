@@ -4,31 +4,31 @@ An AI-powered meeting summarization system that converts meeting audio into a st
 
 The system accepts an audio recording, transcribes it using OpenAI's speech-to-text API, processes the transcript through a LangGraph workflow, and generates:
 
-* 📝 Meeting transcript
-* ✨ Concise summary
-* 📌 Key points
-* 🎯 Key decisions
-* ✅ Action items
-* 👤 Action-item owners
-* 📅 Deadlines when identified
+- 📝 Meeting transcript
+- ✨ Concise summary
+- 📌 Key points
+- 🎯 Key decisions
+- ✅ Action items
+- 👤 Action-item owners
+- 📅 Deadlines when identified
 
 ---
 
 ## 🚀 Features
 
-* Upload meeting audio directly from the web interface
-* Automatic speech-to-text transcription
-* LangGraph-based processing workflow
-* AI-generated meeting summaries
-* Key point extraction
-* Decision extraction
-* Action-item extraction
-* Owner and deadline identification
-* PostgreSQL persistence
-* React-based frontend
-* FastAPI backend
-* API health monitoring
-* Structured JSON responses
+- Upload meeting audio directly from the web interface
+- Automatic speech-to-text transcription
+- LangGraph-based processing workflow
+- AI-generated meeting summaries
+- Key point extraction
+- Decision extraction
+- Action-item extraction
+- Owner and deadline identification
+- PostgreSQL persistence
+- React-based frontend
+- FastAPI backend
+- API health monitoring
+- Structured JSON responses
 
 ---
 
@@ -129,35 +129,35 @@ Quality Check
 
 ### Frontend
 
-* React
-* Vite
-* TypeScript
-* Tailwind CSS
-* Lucide React
+- React
+- Vite
+- TypeScript
+- Tailwind CSS
+- Lucide React
 
 ### Backend
 
-* Python
-* FastAPI
-* SQLAlchemy
-* Pydantic
-* Uvicorn
+- Python
+- FastAPI
+- SQLAlchemy
+- Pydantic
+- Uvicorn
 
 ### AI / LLM
 
-* OpenAI Audio Transcription API
-* GPT-4o-mini
-* LangGraph
-* LangChain components
+- OpenAI Audio Transcription API
+- GPT-4o-mini
+- LangGraph
+- LangChain components
 
 ### Database
 
-* PostgreSQL
+- PostgreSQL
 
 ### Development
 
-* Git
-* Docker / Docker Compose
+- Git
+- Docker / Docker Compose
 
 ---
 
@@ -210,10 +210,10 @@ MeetingSummarizer/
 
 Make sure the following are installed:
 
-* Python 3.10+
-* Node.js 18+
-* PostgreSQL
-* Git
+- Python 3.10+
+- Node.js 18+
+- PostgreSQL
+- Git
 
 You also need an OpenAI API key.
 
@@ -419,12 +419,12 @@ GPT-4o-mini processes the transcript and generates structured information.
 
 The system extracts:
 
-* Summary
-* Key points
-* Decisions
-* Action items
-* Owners
-* Deadlines
+- Summary
+- Key points
+- Decisions
+- Action items
+- Owners
+- Deadlines
 
 ### 6. Persistence
 
@@ -458,14 +458,14 @@ The final review is scheduled for Wednesday.
 
 **Key Decision**
 
-* Use PostgreSQL as the database.
+- Use PostgreSQL as the database.
 
 **Action Items**
 
-| Task                     | Owner      | Due Date  |
-| ------------------------ | ---------- | --------- |
-| Complete the backend     | Tavish     | Friday    |
-| Finish the frontend      | Rahul      | Monday    |
+| Task | Owner | Due Date |
+|---|---|---|
+| Complete the backend | Tavish | Friday |
+| Finish the frontend | Rahul | Monday |
 | Conduct the final review | Unassigned | Wednesday |
 
 ---
@@ -474,14 +474,14 @@ The final review is scheduled for Wednesday.
 
 The project directly addresses the evaluation criteria:
 
-| Evaluation Area          | Implementation                           |
-| ------------------------ | ---------------------------------------- |
-| Transcription accuracy   | OpenAI speech-to-text                    |
-| Summary quality          | GPT-4o-mini                              |
-| LLM prompt effectiveness | Structured JSON summarization prompt     |
-| Code structure           | React + FastAPI + LangGraph + PostgreSQL |
-| Workflow orchestration   | LangGraph                                |
-| User experience          | React + Tailwind interface               |
+| Evaluation Area | Implementation |
+|---|---|
+| Transcription accuracy | OpenAI speech-to-text |
+| Summary quality | GPT-4o-mini |
+| LLM prompt effectiveness | Structured JSON summarization prompt |
+| Code structure | React + FastAPI + LangGraph + PostgreSQL |
+| Workflow orchestration | LangGraph |
+| User experience | React + Tailwind interface |
 
 ---
 
@@ -489,16 +489,16 @@ The project directly addresses the evaluation criteria:
 
 Potential extensions include:
 
-* Speaker diarization
-* Speaker name detection
-* Timestamped transcripts
-* Multi-language transcription
-* Meeting history and search
-* Export summaries as PDF
-* Email/calendar integration
-* Quality-check and retry nodes in LangGraph
-* Authentication and user-specific meetings
-* Cloud deployment
+- Speaker diarization
+- Speaker name detection
+- Timestamped transcripts
+- Multi-language transcription
+- Meeting history and search
+- Export summaries as PDF
+- Email/calendar integration
+- Quality-check and retry nodes in LangGraph
+- Authentication and user-specific meetings
+- Cloud deployment
 
 ---
 
@@ -522,5 +522,3 @@ The demonstration covers:
 **Tavish Singh**
 
 Built as an AI-powered meeting intelligence project using **LangGraph, FastAPI, React, PostgreSQL, and OpenAI**.
-#   M e e t i n g S u m m a r i z e r  
- 
