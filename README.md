@@ -12,6 +12,12 @@ The system accepts an audio recording, transcribes it using OpenAI's speech-to-t
 - 👤 Action-item owners
 - 📅 Deadlines when identified
 
+## 🎥 Demo
+
+Watch the project demo on YouTube:
+
+[▶️ Meeting Summarizer Demo](https://youtu.be/rlUx4S9rutM)
+
 ---
 
 ## 🚀 Features
@@ -46,19 +52,19 @@ The system accepts an audio recording, transcribes it using OpenAI's speech-to-t
                              │
                              ▼
                     ┌─────────────────┐
-                    │    FastAPI      │
+                    │     FastAPI     │
                     │     Backend     │
                     └────────┬────────┘
                              │
                              ▼
-                  ┌─────────────────────┐
-                  │ OpenAI Transcription│
-                  │       (ASR)         │
-                  └──────────┬──────────┘
-                             │
-                         Transcript
-                             │
-                             ▼
+                 ┌─────────────────────┐
+                 │ OpenAI Transcription│
+                 │       (ASR)         │
+                 └──────────┬──────────┘
+                            │
+                        Transcript
+                            │
+                            ▼
                     ┌─────────────────┐
                     │    LangGraph    │
                     │     Workflow    │
@@ -122,6 +128,8 @@ Final Summary
     ↓
 Quality Check
 ```
+
+Using a graph-based architecture keeps the processing stages modular and makes it easier to introduce branching, validation, retries, or additional AI processing nodes as the application grows.
 
 ---
 
@@ -214,6 +222,7 @@ Make sure the following are installed:
 - Node.js 18+
 - PostgreSQL
 - Git
+- Docker (optional, if using Docker Compose)
 
 You also need an OpenAI API key.
 
@@ -227,15 +236,14 @@ Create:
 backend/.env
 ```
 
+Use `backend/.env.example` as the template.
+
 Example:
 
 ```env
 DATABASE_URL=postgresql+psycopg://postgres:postgres@localhost:5432/meeting_summarizer
-
 OPENAI_API_KEY=your_openai_api_key
-
 OPENAI_SUMMARY_MODEL=gpt-4o-mini
-
 CORS_ORIGINS=["http://localhost:5173"]
 ```
 
@@ -266,7 +274,7 @@ docker compose up -d postgres
 
 Or use an existing local PostgreSQL installation.
 
-Create the database:
+If the database does not already exist, create it:
 
 ```sql
 CREATE DATABASE meeting_summarizer;
@@ -278,7 +286,6 @@ CREATE DATABASE meeting_summarizer;
 
 ```powershell
 cd backend
-
 python -m venv .venv
 ```
 
@@ -409,7 +416,7 @@ The backend sends the audio to OpenAI's transcription API and receives the meeti
 
 ### 3. LangGraph Processing
 
-The transcript is passed into the LangGraph workflow.
+The transcript is passed into the LangGraph workflow as graph state.
 
 ### 4. LLM Summarization
 
@@ -438,19 +445,23 @@ The React application displays the complete meeting recap.
 
 # 🧪 Example
 
-### Input
+## Input
 
 A meeting recording containing:
 
 ```text
 Today's meeting is about the Meeting Summarizer project.
+
 We decided to use PostgreSQL as the database.
+
 Tavish will complete the backend by Friday.
+
 Rahul will finish the frontend by Monday.
+
 The final review is scheduled for Wednesday.
 ```
 
-### Output
+## Output
 
 **Summary**
 
@@ -472,7 +483,7 @@ The final review is scheduled for Wednesday.
 
 # 🎯 Evaluation Alignment
 
-The project directly addresses the evaluation criteria:
+The project directly addresses the following evaluation areas:
 
 | Evaluation Area | Implementation |
 |---|---|
@@ -499,6 +510,7 @@ Potential extensions include:
 - Quality-check and retry nodes in LangGraph
 - Authentication and user-specific meetings
 - Cloud deployment
+- MCP integrations for external productivity tools
 
 ---
 
@@ -514,6 +526,9 @@ The demonstration covers:
 6. Extracting decisions
 7. Generating action items with owners and deadlines
 8. Displaying the complete structured recap
+
+**Demo video:**  
+https://youtu.be/rlUx4S9rutM
 
 ---
 
